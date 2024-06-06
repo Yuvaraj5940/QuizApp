@@ -1,0 +1,178 @@
+[
+    {
+      "questionNum": 1,
+      "text": "What is the capital of France?",
+      "options": ["Paris", "London", "Berlin", "Madrid"],
+      "correctAnswer": "Paris",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 2,
+      "text": "Solve 5 * 5",
+      "options": ["10", "15", "20", "25"],
+      "correctAnswer": "25",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 3,
+      "text": "Which number comes next in the sequence: 2, 4, 6, 8, ...?",
+      "options": ["10", "11", "12", "14"],
+      "correctAnswer": "10",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 4,
+      "text": "If you arrange the words in alphabetical order, which word comes last?",
+      "options": ["Apple", "Orange", "Banana", "Peach"],
+      "correctAnswer": "Peach",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 5,
+      "text": "What is 12% of 50?",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "6",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 6,
+      "text": "What is the square root of 144?",
+      "options": ["10", "11", "12", "13"],
+      "correctAnswer": "12",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 7,
+      "text": "What is the sum of the first five prime numbers?",
+      "options": ["18", "26", "28", "30"],
+      "correctAnswer": "28",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 8,
+      "text": "Which shape has the most sides?",
+      "options": ["Triangle", "Square", "Hexagon", "Pentagon"],
+      "correctAnswer": "Hexagon",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 9,
+      "text": "Solve 45 ÷ 9",
+      "options": ["3", "4", "5", "6"],
+      "correctAnswer": "5",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 10,
+      "text": "If a car travels 60 miles in 1 hour, how far will it travel in 4 hours?",
+      "options": ["120 miles", "180 miles", "240 miles", "300 miles"],
+      "correctAnswer": "240 miles",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 11,
+      "text": "What is 3/5 of 100?",
+      "options": ["55", "60", "65", "70"],
+      "correctAnswer": "60",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 12,
+      "text": "Which planet is known as the Red Planet?",
+      "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+      "correctAnswer": "Mars",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 13,
+      "text": "Solve for x: 2x + 6 = 14",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": "4",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 14,
+      "text": "What is the chemical symbol for water?",
+      "options": ["O2", "H2", "CO2", "H2O"],
+      "correctAnswer": "H2O",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 15,
+      "text": "What is the next number in the sequence: 1, 4, 9, 16, ...?",
+      "options": ["20", "24", "25", "30"],
+      "correctAnswer": "25",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 16,
+      "text": "If an item costs $150 and is marked down by 20%, what is the sale price?",
+      "options": ["$100", "$110", "$120", "$130"],
+      "correctAnswer": "$120",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 17,
+      "text": "How many sides does a hexagon have?",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "6",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 18,
+      "text": "What is 15% of 200?",
+      "options": ["20", "25", "30", "35"],
+      "correctAnswer": "30",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 19,
+      "text": "Which gas do plants absorb from the atmosphere?",
+      "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+      "correctAnswer": "Carbon Dioxide",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 20,
+      "text": "Solve: 8 * 7 - 10",
+      "options": ["46", "48", "54", "56"],
+      "correctAnswer": "46",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 21,
+      "text": "Which word is a synonym of 'happy'?",
+      "options": ["Sad", "Angry", "Joyful", "Bored"],
+      "correctAnswer": "Joyful",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 22,
+      "text": "If you have a 10% chance to win a game and you play 100 times, how many times would you expect to win?",
+      "options": ["5", "10", "15", "20"],
+      "correctAnswer": "10",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 23,
+      "text": "Which country is the largest by land area?",
+      "options": ["China", "Canada", "USA", "Russia"],
+      "correctAnswer": "Russia",
+      "priority": "easy"
+    },
+    {
+      "questionNum": 24,
+      "text": "Solve for y: 3y - 9 = 0",
+      "options": ["1", "2", "3", "4"],
+      "correctAnswer": "3",
+      "priority": "medium"
+    },
+    {
+      "questionNum": 25,
+      "text": "What is the perimeter of a square with side length 5 units?",
+      "options": ["10 units", "15 units", "20 units", "25 units"],
+      "correctAnswer": "20 units",
+      "priority": "easy"
+    }
+  ]
+  
