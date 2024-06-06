@@ -36,6 +36,11 @@
     Lime_green:'#32CD32',
     Jungle_grenn:'#2AAA8A',
     Green:'#008000',
+    NeonGreen:'#2CE71E',
+    LightGrey:'#D3D3D3',
+    opGrey:'#808080',
+    Red:'#F60003',
+    Coral:'#FF7F50'
   };
 
   

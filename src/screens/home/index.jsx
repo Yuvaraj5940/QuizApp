@@ -1,13 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, BackHandler } from "react-native";
 // import globalStyles from "../../styles/globalStyles";
 import { COLORS, FONTSIZE } from "../../theme/theme";
 import NetworkError from "../network";
 import NetInfo from "@react-native-community/netinfo";
+import CustomModal from "../../components/model/CustomModal";
 
 const HomeScreen = ({ navigation }) => {
   const [refreshing, setRefreshing] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  useEffect(() => {
+    const backAction = () => {
+      navigation.canGoBack(false);
+      setModalVisible(true);
+      return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      backAction
+    );
+
+    return () => backHandler.remove();
+  }, []);
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener((state) => {
       // console.log('Connection type', state.type);
@@ -22,6 +39,16 @@ const HomeScreen = ({ navigation }) => {
       unsubscribe();
     };
   }, []);
+  const handleModalClose = () => {
+    setModalVisible(false);
+  };
+
+  const handleModalYes = () => {
+    setModalVisible(false);
+    BackHandler.exitApp()
+    // dispatch(resetQuiz());
+    // navigation.goBack();
+  };
   return (
     <>
       {isConnected == true && refreshing == false ? (
@@ -33,6 +60,16 @@ const HomeScreen = ({ navigation }) => {
           >
             <Text style={styles.btnText}>Start Quiz</Text>
           </TouchableOpacity>
+          <CustomModal
+            visible={modalVisible}
+            onClose={handleModalClose}
+            onYes={handleModalYes}
+            title="Exit App"
+          >
+            <Text>
+              Are you sure you want to exit?
+            </Text>
+          </CustomModal>
         </View>
       ) : (
         <>

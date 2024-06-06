@@ -4,6 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   currentQuestionIndex: 0,
   score: 0,
+  AnswerArray:[]
 };
 
 const quizSlice = createSlice({
@@ -17,9 +18,13 @@ const quizSlice = createSlice({
       state.score = action.payload;
     },
     resetQuiz: () => initialState,
+    setAnswerAtIndex: (state, action) => {
+      const { index, option } = action.payload;
+      state.AnswerArray[index] = option;
+    }
   },
 });
 
-export const { setCurrentQuestionIndex, setScore, resetQuiz } = quizSlice.actions;
+export const { setCurrentQuestionIndex, setScore, resetQuiz, setAnswerAtIndex } = quizSlice.actions;
 
 export default quizSlice.reducer;

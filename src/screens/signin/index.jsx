@@ -44,7 +44,7 @@ const SignIn = ({ navigation }) => {
   const [remember, setRemember] = useState(false);
   const [signedin, setSignedin] = useState(false);
   const [localusername, setLocalUserName] = useState("");
-  const [isConnected, setIsConnected] = useState(false);
+  const [isConnected, setIsConnected] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [showError, setShowError] = useState(false);
   const [emailCheck, setEmailCheck] = useState(false);

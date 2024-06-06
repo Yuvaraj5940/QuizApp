@@ -6,10 +6,12 @@ import {
   TouchableOpacity,
   StyleSheet,
   Alert,
+  ActivityIndicator,
 } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import {
   resetQuiz,
+  setAnswerAtIndex,
   setCurrentQuestionIndex,
   setScore,
 } from "../../store/slices/quizSlice";
@@ -26,12 +28,11 @@ const QuizScreen = ({ navigation }) => {
   const currentQuestionIndex = useSelector(
     (state) => state.quiz.currentQuestionIndex
   );
-  const score = useSelector((state) => state.quiz.score);
 
+  const score = useSelector((state) => state.quiz.score);
   const [startTime, setStartTime] = useState(Date.now());
   const [modalVisible, setModalVisible] = useState(false);
-
-  // const [lifelineUsed, setLifelineUsed] = useState(false);
+  const [remainingTime, setRemainingTime] = useState(20); // countdown timer
 
   useEffect(() => {
     setStartTime(Date.now());
@@ -50,14 +51,10 @@ const QuizScreen = ({ navigation }) => {
 
     return () => backHandler.remove();
   }, []);
+
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener((state) => {
-      // console.log('Connection type', state.type);
-      // console.log('Is connected', state.isConnected);
       setIsConnected(state.isConnected);
-      // if(state.isConnected == false){
-      //   setLikeList([])
-      // }
     });
 
     return () => {
@@ -65,34 +62,54 @@ const QuizScreen = ({ navigation }) => {
     };
   }, []);
 
-  const handleAnswer = (option) => {
-    const endTime = Date.now();
-    const timeTaken = (endTime - startTime) / 1000; // in seconds
-    const maxTime = 50; // seconds
-    const question = questions[currentQuestionIndex];
-    const basePoints = (maxTime - timeTaken) * 5000;
-    let points = 0;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      handleNextQuestion();
+    }, 20000);
 
-    if (option === question.correctAnswer) {
-      points = points + 1;
-    }
+    const interval = setInterval(() => {
+      setRemainingTime((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
 
-    dispatch(setScore(score + points));
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+      setRemainingTime(20);
+    };
+  }, [currentQuestionIndex]);
 
+  const handleNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
       dispatch(setCurrentQuestionIndex(currentQuestionIndex + 1));
     } else {
+      dispatch(setAnswerAtIndex({ index: questions.length - 1, undefined}));
       navigation.navigate("Result", {
-        score: score + points,
-        TotalScore: questions?.length,
+        score,
+        TotalScore: questions.length,
       });
     }
   };
 
-  // const use5050Lifeline = () => {
-  //   setLifelineUsed(true);
-  //   // Logic to remove two incorrect options
-  // };
+  const handleAnswer = (option, index) => {
+    const endTime = Date.now();
+    const timeTaken = (endTime - startTime) / 1000; // in seconds
+    const maxTime = 50; // seconds
+    const question = questions[currentQuestionIndex];
+    const basePoints = (maxTime - timeTaken) * 20000;
+    let points = 0;
+
+    if (option === question.correctAnswer) {
+      points = points + 1;
+      // if(index){
+      //   dispatch(setAnswerAtIndex({ index: currentQuestionIndex, option }));
+      // }
+
+    }
+    dispatch(setAnswerAtIndex({ index: currentQuestionIndex, option }));
+    dispatch(setScore(score + points));
+    handleNextQuestion();
+  };
+
   const handleModalClose = () => {
     setModalVisible(false);
   };
@@ -107,26 +124,24 @@ const QuizScreen = ({ navigation }) => {
 
   return (
     <>
-      {isConnected == true && refreshing == false ? (
-        <View style={style.container}>
-          <View style={style.questionsView}>
-            <Text style={style.questionsNO}>{question.questionNum}. </Text>
-            <Text style={style.questionsTxt}>{question.text}</Text>
+      {isConnected && !refreshing ? (
+        <View style={styles.container}>
+          <View style={styles.questionContainer}>
+            <Text style={styles.questionNumber}>{question.questionNum}. </Text>
+            <Text style={styles.questionText}>{question.text}</Text>
           </View>
-          <View style={style.optionrak}>
+          <Text style={styles.timerText}>Time remaining: {remainingTime}s</Text>
+          <View style={styles.optionsContainer}>
             {question.options.map((option, index) => (
               <TouchableOpacity
-                style={style.touchablbtn}
+                style={styles.optionButton}
                 key={index}
-                onPress={() => handleAnswer(option)}
+                onPress={() => handleAnswer(option, index)}
               >
-                <Text style={style.optionText}>{option}</Text>
+                <Text style={styles.optionText}>{option}</Text>
               </TouchableOpacity>
             ))}
           </View>
-          {/* {!lifelineUsed && (
-        <Button title="50/50 Lifeline" onPress={use5050Lifeline} />
-      )} */}
 
           <CustomModal
             visible={modalVisible}
@@ -142,10 +157,10 @@ const QuizScreen = ({ navigation }) => {
         </View>
       ) : (
         <>
-          {isConnected == false && refreshing == false ? (
+          {!isConnected && !refreshing ? (
             <NetworkError
               navigation={navigation}
-              onpress={() => {
+              onPress={() => {
                 setRefreshing(true);
                 setTimeout(() => {
                   setRefreshing(false);
@@ -154,7 +169,7 @@ const QuizScreen = ({ navigation }) => {
             />
           ) : (
             <View style={styles.indicator}>
-              <ActivityIndicator size={40} color={"#EA5242"} />
+              <ActivityIndicator size={40} color={COLORS.Primary} />
             </View>
           )}
         </>
@@ -164,49 +179,68 @@ const QuizScreen = ({ navigation }) => {
 };
 
 export default QuizScreen;
-const style = StyleSheet.create({
+
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: "center",
-    // alignItems: "center",
     padding: SPACING.space_18,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: COLORS.LightGray,
   },
-  touchablbtn: {
-    backgroundColor: "#6200EE",
-    padding: 10,
-    marginVertical: 5,
-    borderRadius: 5,
-    width: "95%",
+  questionContainer: {
+    flexDirection: "row",
+    marginBottom: SPACING.space_12,
+    padding: SPACING.space_12,
+    backgroundColor: COLORS.White,
+    borderRadius: 8,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 4,
+  },
+  questionNumber: {
+    fontSize: FONTSIZE.size_20,
+    fontWeight: "bold",
+    color: COLORS.Primary,
+  },
+  questionText: {
+    fontSize: FONTSIZE.size_18,
+    color: COLORS.Black,
+    flexWrap: "wrap",
+    flex: 1,
+  },
+  optionsContainer: {
+    gap: SPACING.space_12,
+    justifyContent: "flex-start",
+    marginTop: SPACING.space_12,
+  },
+  optionButton: {
+    backgroundColor: COLORS.opGrey,
+    padding: SPACING.space_12,
+    marginVertical: SPACING.space_4,
+    borderRadius: 8,
     alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 4,
   },
   optionText: {
-    color: "#fff",
-    fontSize: 18,
-  },
-  txtbtn1: {
-    fontSize: FONTSIZE.size_16,
-    fontWeight: "bold",
     color: COLORS.White,
-  },
-  optionrak: {
-    gap: 10,
-    justifyContent: "flex-start",
-  },
-  questionsView: {
-    flexDirection: "row",
-    // paddingTop:SPACING.space_24,
-    marginBottom: SPACING.space_12,
-    marginRight: SPACING.space_10,
-    // flexWrap:'wrap'
-  },
-  questionsTxt: {
-    fontSize: FONTSIZE.size_16,
-    color: "#000",
-    flexWrap: "wrap",
-  },
-  questionsNO: {
     fontSize: FONTSIZE.size_18,
-    color: "#000",
+    fontWeight: "bold",
+  },
+  timerText: {
+    fontSize: FONTSIZE.size_16,
+    color: COLORS.Red,
+    alignSelf: "center",
+    marginTop: SPACING.space_8,
+    fontWeight: "bold",
+  },
+  indicator: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
