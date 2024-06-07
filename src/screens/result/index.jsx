@@ -6,13 +6,14 @@ import {
   StyleSheet,
   ScrollView,
   ActivityIndicator,
+  BackHandler,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetQuiz } from '../../store/slices/quizSlice';
 import { COLORS, FONTSIZE, SPACING } from '../../theme/theme';
 import NetInfo from '@react-native-community/netinfo';
 import NetworkError from '../network';
-import questions from '../../components/quastions/Quations.json';
+// import questions from '../../components/quastions/Quations.json';
 
 const ResultScreen = ({ navigation }) => {
   const [refreshing, setRefreshing] = useState(false);
@@ -20,11 +21,26 @@ const ResultScreen = ({ navigation }) => {
   const score = useSelector(state => state.quiz.score);
   const AnswerArray = useSelector(state => state.quiz.AnswerArray);
   const dispatch = useDispatch();
+  const quizArray = useSelector(state => state.quiz.QuizArray);
 
   const handlePlayAgain = () => {
     dispatch(resetQuiz());
     navigation.navigate('Home');
   };
+
+  useEffect(() => {
+    const backAction = () => {
+        handlePlayAgain()
+       return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      backAction,
+    );
+
+    return () => backHandler.remove();
+  }, []);
 
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
@@ -49,7 +65,7 @@ const ResultScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
           <ScrollView contentContainerStyle={styles.scrollView}>
-            {questions.map((question, index) => (
+            {quizArray.map((question, index) => (
               <View key={index} style={styles.questionContainer}>
                 <Text style={styles.questionText}>
                   {question.questionNum}. {question.text}

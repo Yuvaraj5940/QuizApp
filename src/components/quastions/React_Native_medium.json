@@ -1,0 +1,278 @@
+[
+    {
+      "questionNum": 1,
+      "text": "What is the primary benefit of using React Native's 'Fast Refresh'?",
+      "options": [
+        "Automatic code formatting",
+        "Automatic state management",
+        "Preserves component state while updating UI",
+        "Automatic dependency installation"
+      ],
+      "correctAnswer": "Preserves component state while updating UI"
+    },
+    {
+      "questionNum": 2,
+      "text": "Which command is used to link native dependencies in React Native?",
+      "options": [
+        "react-native link",
+        "react-native connect",
+        "npm link react-native",
+        "react-native install"
+      ],
+      "correctAnswer": "react-native link"
+    },
+    {
+      "questionNum": 3,
+      "text": "How can you optimize performance in React Native using the 'shouldComponentUpdate' lifecycle method?",
+      "options": [
+        "By preventing unnecessary re-renders",
+        "By managing state",
+        "By fetching data asynchronously",
+        "By styling components"
+      ],
+      "correctAnswer": "By preventing unnecessary re-renders"
+    },
+    {
+      "questionNum": 4,
+      "text": "Which hook is used to access the navigation object in React Navigation?",
+      "options": [
+        "useNav",
+        "useNavigation",
+        "useNavigate",
+        "useRouter"
+      ],
+      "correctAnswer": "useNavigation"
+    },
+    {
+      "questionNum": 5,
+      "text": "What is the purpose of the 'Animated' API in React Native?",
+      "options": [
+        "To handle navigation",
+        "To manage state",
+        "To create smooth animations",
+        "To fetch data"
+      ],
+      "correctAnswer": "To create smooth animations"
+    },
+    {
+      "questionNum": 6,
+      "text": "How do you apply platform-specific styles in React Native?",
+      "options": [
+        "Using Platform.OS",
+        "Using device-specific stylesheets",
+        "Using conditional rendering",
+        "Using platform-style extensions"
+      ],
+      "correctAnswer": "Using Platform.OS"
+    },
+    {
+      "questionNum": 7,
+      "text": "What is the role of the 'SafeAreaView' component in React Native?",
+      "options": [
+        "To create a scrollable container",
+        "To handle touch events",
+        "To render items in a list",
+        "To ensure content is not hidden by device notches or status bars"
+      ],
+      "correctAnswer": "To ensure content is not hidden by device notches or status bars"
+    },
+    {
+      "questionNum": 8,
+      "text": "Which method is used to persist state across app launches in React Native?",
+      "options": [
+        "AsyncStorage",
+        "LocalStorage",
+        "SessionStorage",
+        "FileStorage"
+      ],
+      "correctAnswer": "AsyncStorage"
+    },
+    {
+      "questionNum": 9,
+      "text": "How do you implement a tab-based navigation in React Native?",
+      "options": [
+        "Using TabNavigator from 'react-navigation-tabs'",
+        "Using createBottomTabNavigator from '@react-navigation/bottom-tabs'",
+        "Using TabBar from 'react-native-tabs'",
+        "Using createTabs from 'react-native-tabs'"
+      ],
+      "correctAnswer": "Using createBottomTabNavigator from '@react-navigation/bottom-tabs'"
+    },
+    {
+      "questionNum": 10,
+      "text": "What does the 'useReducer' hook do in React Native?",
+      "options": [
+        "Manages state transitions",
+        "Handles side effects",
+        "Renders components conditionally",
+        "Applies styles dynamically"
+      ],
+      "correctAnswer": "Manages state transitions"
+    },
+    {
+      "questionNum": 11,
+      "text": "How can you handle global state management in a React Native app?",
+      "options": [
+        "Using React Context and useReducer",
+        "Using local state in each component",
+        "Using React Router",
+        "Using componentWillMount lifecycle method"
+      ],
+      "correctAnswer": "Using React Context and useReducer"
+    },
+    {
+      "questionNum": 12,
+      "text": "Which component can be used to create a floating action button in React Native?",
+      "options": [
+        "<Button>",
+        "<TouchableOpacity>",
+        "<FloatingActionButton>",
+        "<Pressable>"
+      ],
+      "correctAnswer": "<TouchableOpacity>"
+    },
+    {
+      "questionNum": 13,
+      "text": "How can you handle different screen sizes and orientations in React Native?",
+      "options": [
+        "Using the Dimensions API",
+        "Using media queries",
+        "Using Platform.OS",
+        "Using componentWillUpdate lifecycle method"
+      ],
+      "correctAnswer": "Using the Dimensions API"
+    },
+    {
+      "questionNum": 14,
+      "text": "What is the purpose of the 'useContext' hook?",
+      "options": [
+        "To manage component state",
+        "To access the value of a React context",
+        "To perform side effects",
+        "To create navigation routes"
+      ],
+      "correctAnswer": "To access the value of a React context"
+    },
+    {
+      "questionNum": 15,
+      "text": "How do you create a custom hook in React Native?",
+      "options": [
+        "By using the 'useHook' keyword",
+        "By writing a function starting with 'use' that can call other hooks",
+        "By extending the Component class",
+        "By using the customHook keyword"
+      ],
+      "correctAnswer": "By writing a function starting with 'use' that can call other hooks"
+    },
+    {
+      "questionNum": 16,
+      "text": "What is the purpose of the 'InteractionManager' in React Native?",
+      "options": [
+        "To manage navigation transitions",
+        "To manage animations",
+        "To handle complex gestures",
+        "To schedule tasks after interactions"
+      ],
+      "correctAnswer": "To schedule tasks after interactions"
+    },
+    {
+      "questionNum": 17,
+      "text": "Which command is used to upgrade a React Native project to the latest version?",
+      "options": [
+        "npm upgrade react-native",
+        "react-native upgrade",
+        "npm update react-native",
+        "npx react-native upgrade"
+      ],
+      "correctAnswer": "npx react-native upgrade"
+    },
+    {
+      "questionNum": 18,
+      "text": "How do you debug a React Native app?",
+      "options": [
+        "Using console.log statements",
+        "Using React Developer Tools",
+        "Using the React Native Debugger",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "questionNum": 19,
+      "text": "What is the purpose of the 'useRef' hook?",
+      "options": [
+        "To create a mutable object that persists across renders",
+        "To handle side effects",
+        "To fetch data from an API",
+        "To manage component state"
+      ],
+      "correctAnswer": "To create a mutable object that persists across renders"
+    },
+    {
+      "questionNum": 20,
+      "text": "Which component is used to display a loading spinner in React Native?",
+      "options": [
+        "<LoadingSpinner>",
+        "<Spinner>",
+        "<ActivityIndicator>",
+        "<ProgressCircle>"
+      ],
+      "correctAnswer": "<ActivityIndicator>"
+    },
+    {
+      "questionNum": 21,
+      "text": "How can you handle accessibility in a React Native app?",
+      "options": [
+        "Using the 'accessibilityLabel' prop",
+        "Using the 'accessible' prop",
+        "Using the 'accessibilityHint' prop",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "questionNum": 22,
+      "text": "What is the purpose of the 'useLayoutEffect' hook?",
+      "options": [
+        "To perform side effects after DOM updates",
+        "To perform side effects after render",
+        "To manage component state",
+        "To handle context"
+      ],
+      "correctAnswer": "To perform side effects after DOM updates"
+    },
+    {
+      "questionNum": 23,
+      "text": "How do you integrate third-party libraries in a React Native project?",
+      "options": [
+        "Using npm or yarn",
+        "Using the 'import' statement",
+        "Using link dependencies",
+        "Using custom scripts"
+      ],
+      "correctAnswer": "Using npm or yarn"
+    },
+    {
+      "questionNum": 24,
+      "text": "What is the role of the 'Metro' bundler in React Native?",
+      "options": [
+        "To compile the app code",
+        "To bundle JavaScript code and assets",
+        "To manage navigation",
+        "To handle state management"
+      ],
+      "correctAnswer": "To bundle JavaScript code and assets"
+    },
+    {
+      "questionNum": 25,
+      "text": "How can you handle different environments (development, production) in a React Native app?",
+      "options": [
+        "Using environment variables",
+        "Using different config files",
+        "Using conditionals in the code",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    }
+  ]
+  

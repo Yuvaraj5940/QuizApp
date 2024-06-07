@@ -1,0 +1,278 @@
+[
+    {
+      "questionNum": 1,
+      "text": "What is Git?",
+      "options": [
+        "A version control system",
+        "A programming language",
+        "A text editor",
+        "A database management system"
+      ],
+      "correctAnswer": "A version control system"
+    },
+    {
+      "questionNum": 2,
+      "text": "Which command is used to create a new branch in Git?",
+      "options": [
+        "git branch",
+        "git checkout",
+        "git commit",
+        "git merge"
+      ],
+      "correctAnswer": "git branch"
+    },
+    {
+      "questionNum": 3,
+      "text": "What command is used to view the commit history in Git?",
+      "options": [
+        "git history",
+        "git log",
+        "git show",
+        "git status"
+      ],
+      "correctAnswer": "git log"
+    },
+    {
+      "questionNum": 4,
+      "text": "How do you discard changes in the working directory that are not staged for commit?",
+      "options": [
+        "git reset",
+        "git clean",
+        "git revert",
+        "git checkout"
+      ],
+      "correctAnswer": "git checkout"
+    },
+    {
+      "questionNum": 5,
+      "text": "What is the purpose of the .gitignore file?",
+      "options": [
+        "To store backup files",
+        "To list files and directories that should be ignored by Git",
+        "To track changes to files",
+        "To store Git configuration settings"
+      ],
+      "correctAnswer": "To list files and directories that should be ignored by Git"
+    },
+    {
+      "questionNum": 6,
+      "text": "Which Git command is used to combine the changes from one branch into another?",
+      "options": [
+        "git merge",
+        "git rebase",
+        "git pull",
+        "git push"
+      ],
+      "correctAnswer": "git merge"
+    },
+    {
+      "questionNum": 7,
+      "text": "What is the purpose of the command 'git stash'?",
+      "options": [
+        "To permanently delete changes",
+        "To list all stashed changes",
+        "To temporarily store changes that are not ready to be committed",
+        "To rename a branch"
+      ],
+      "correctAnswer": "To temporarily store changes that are not ready to be committed"
+    },
+    {
+      "questionNum": 8,
+      "text": "How do you remove a file from the staging area in Git?",
+      "options": [
+        "git remove",
+        "git unstage",
+        "git reset",
+        "git delete"
+      ],
+      "correctAnswer": "git reset"
+    },
+    {
+      "questionNum": 9,
+      "text": "What is the purpose of the command 'git clone'?",
+      "options": [
+        "To create a new repository",
+        "To download a copy of an existing repository",
+        "To merge branches",
+        "To delete a repository"
+      ],
+      "correctAnswer": "To download a copy of an existing repository"
+    },
+    {
+      "questionNum": 10,
+      "text": "What is a Git repository?",
+      "options": [
+        "A folder on your computer",
+        "A collection of files and directories managed by Git",
+        "A remote server hosting your code",
+        "A version of Git"
+      ],
+      "correctAnswer": "A collection of files and directories managed by Git"
+    },
+    {
+      "questionNum": 11,
+      "text": "What does the command 'git pull' do?",
+      "options": [
+        "It pushes changes from a local branch to a remote branch",
+        "It fetches changes from a remote repository and merges them into the current branch",
+        "It reverts the last commit",
+        "It deletes the current branch"
+      ],
+      "correctAnswer": "It fetches changes from a remote repository and merges them into the current branch"
+    },
+    {
+      "questionNum": 12,
+      "text": "How do you create a new commit in Git?",
+      "options": [
+        "git add",
+        "git commit",
+        "git push",
+        "git pull"
+      ],
+      "correctAnswer": "git commit"
+    },
+    {
+      "questionNum": 13,
+      "text": "What is the purpose of the command 'git fetch'?",
+      "options": [
+        "To upload changes to a remote repository",
+        "To download changes from a remote repository",
+        "To merge branches",
+        "To delete a branch"
+      ],
+      "correctAnswer": "To download changes from a remote repository"
+    },
+    {
+      "questionNum": 14,
+      "text": "How do you rename a file in Git?",
+      "options": [
+        "git mv",
+        "git rename",
+        "git move",
+        "git rename-file"
+      ],
+      "correctAnswer": "git mv"
+    },
+    {
+      "questionNum": 15,
+      "text": "What is a Git merge conflict?",
+      "options": [
+        "When two or more branches have diverged and changes cannot be automatically merged",
+        "When a file is deleted from the repository",
+        "When a commit is reverted",
+        "When changes are staged for commit"
+      ],
+      "correctAnswer": "When two or more branches have diverged and changes cannot be automatically merged"
+    },
+    {
+      "questionNum": 16,
+      "text": "What is the purpose of the command 'git remote'?",
+      "options": [
+        "To list remote repositories",
+        "To add a new remote repository",
+        "To remove a remote repository",
+        "To rename a remote repository"
+      ],
+      "correctAnswer": "To list remote repositories"
+    },
+    {
+      "questionNum": 17,
+      "text": "How do you create a new tag in Git?",
+      "options": [
+        "git tag",
+        "git add-tag",
+        "git create-tag",
+        "git new-tag"
+      ],
+      "correctAnswer": "git tag"
+    },
+    {
+      "questionNum": 18,
+      "text": "What is the purpose of the command 'git log'?",
+      "options": [
+        "To list all branches",
+        "To view the commit history",
+        "To show the changes between commits",
+        "To delete the commit history"
+      ],
+      "correctAnswer": "To view the commit history"
+    },
+    {
+      "questionNum": 19,
+      "text": "How do you undo the last commit in Git?",
+      "options": [
+        "git reset",
+        "git revert",
+        "git undo",
+        "git rollback"
+      ],
+      "correctAnswer": "git reset"
+    },
+    {
+      "questionNum": 20,
+      "text": "What is the purpose of the command 'git branch -d <branch>'?",
+      "options": [
+        "To delete a branch",
+        "To create a branch",
+        "To rename a branch",
+        "To merge a branch"
+      ],
+      "correctAnswer": "To delete a branch"
+    },
+    {
+      "questionNum": 21,
+      "text": "How do you view the differences between two branches in Git?",
+      "options": [
+        "git compare",
+        "git diff",
+        "git branch",
+        "git show"
+      ],
+      "correctAnswer": "git diff"
+    },
+    {
+      "questionNum": 22,
+      "text": "What does the command 'git push -u origin <branch>' do?",
+      "options": [
+        "It updates the local repository with changes from the remote repository",
+        "It uploads changes from the local repository to the remote repository",
+        "It sets the upstream branch for the local branch",
+        "It pulls changes from the remote repository"
+      ],
+      "correctAnswer": "It sets the upstream branch for the local branch"
+    },
+    {
+      "questionNum": 23,
+      "text": "How do you revert a commit that has already been pushed to a remote repository?",
+      "options": [
+        "git reset",
+        "git revert",
+        "git undo",
+        "git rollback"
+      ],
+      "correctAnswer": "git revert"
+    },
+    {
+      "questionNum": 24,
+      "text": "What is the purpose of the command 'git cherry-pick'?",
+      "options": [
+        "To merge changes from one branch to another",
+        "To discard changes in the working directory",
+        "To view the commit history",
+        "To revert a commit"
+      ],
+      "correctAnswer": "To merge changes from one branch to another"
+    },
+    {
+      "questionNum": 25,
+      "text": "How do you create a new branch and switch to it in one command in Git?",
+      "options": [
+        "git branch",
+        "git checkout",
+        "git switch",
+        "git branch -b"
+      ],
+      "correctAnswer": "git checkout"
+    }
+  ]
+  

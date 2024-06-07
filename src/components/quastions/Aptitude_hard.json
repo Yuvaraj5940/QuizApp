@@ -1,0 +1,277 @@
+[
+  {
+    "questionNum": 1,
+    "text": "What is the square root of 169?",
+    "options": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "correctAnswer": "13"
+  },
+  {
+    "questionNum": 2,
+    "text": "If a car travels at a speed of 60 miles per hour, how far will it travel in 2.5 hours?",
+    "options": [
+      "150 miles",
+      "135 miles",
+      "140 miles",
+      "125 miles"
+    ],
+    "correctAnswer": "150 miles"
+  },
+  {
+    "questionNum": 3,
+    "text": "What is the next number in the sequence: 2, 5, 10, 17, 26, ...?",
+    "options": [
+      "35",
+      "36",
+      "37",
+      "38"
+    ],
+    "correctAnswer": "37"
+  },
+  {
+    "questionNum": 4,
+    "text": "If x + 3 = 8, what is the value of x?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctAnswer": "5"
+  },
+  {
+    "questionNum": 5,
+    "text": "What is 20% of 150?",
+    "options": [
+      "25",
+      "30",
+      "35",
+      "40"
+    ],
+    "correctAnswer": "30"
+  },
+  {
+    "questionNum": 6,
+    "text": "Solve for x: 2x - 5 = 7",
+    "options": [
+      "x = 6",
+      "x = 7",
+      "x = 8",
+      "x = 9"
+    ],
+    "correctAnswer": "x = 6"
+  },
+  {
+    "questionNum": 7,
+    "text": "What is the sum of the interior angles of a triangle?",
+    "options": [
+      "90 degrees",
+      "180 degrees",
+      "270 degrees",
+      "360 degrees"
+    ],
+    "correctAnswer": "180 degrees"
+  },
+  {
+    "questionNum": 8,
+    "text": "If 3x - 7 = 8, what is the value of x?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": "5"
+  },
+  {
+    "questionNum": 9,
+    "text": "What is 25% of 80?",
+    "options": [
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "correctAnswer": "20"
+  },
+  {
+    "questionNum": 10,
+    "text": "Solve for x: 4(x - 3) = 16",
+    "options": [
+      "x = 4",
+      "x = 5",
+      "x = 6",
+      "x = 7"
+    ],
+    "correctAnswer": "x = 7"
+  },
+  {
+    "questionNum": 11,
+    "text": "What is the least common multiple of 6 and 8?",
+    "options": [
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "correctAnswer": "24"
+  },
+  {
+    "questionNum": 12,
+    "text": "If 3x + 5 = 20, what is the value of x?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": "5"
+  },
+  {
+    "questionNum": 13,
+    "text": "What is 30% of 150?",
+    "options": [
+      "30",
+      "40",
+      "45",
+      "50"
+    ],
+    "correctAnswer": "45"
+  },
+  {
+    "questionNum": 14,
+    "text": "If 2x + 3 = 11, what is the value of x?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctAnswer": "4"
+  },
+  {
+    "questionNum": 15,
+    "text": "What is the area of a rectangle with length 8 and width 5?",
+    "options": [
+      "35",
+      "40",
+      "45",
+      "50"
+    ],
+    "correctAnswer": "40"
+  },
+  {
+    "questionNum": 16,
+    "text": "Solve for x: 3x - 2 = 10",
+    "options": [
+      "x = 4",
+      "x = 5",
+      "x = 6",
+      "x = 7"
+    ],
+    "correctAnswer": "x = 4"
+  },
+  {
+    "questionNum": 17,
+    "text": "What is 40% of 120?",
+    "options": [
+      "36",
+      "42",
+      "48",
+      "54"
+    ],
+    "correctAnswer": "48"
+  },
+  {
+    "questionNum": 18,
+    "text": "If 4x - 3 = 13, what is the value of x?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctAnswer": "4"
+  },
+  {
+    "questionNum": 19,
+    "text": "What is the next number in the sequence: 3, 6, 12, 24, ...?",
+    "options": [
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "correctAnswer": "48"
+  },
+  {
+    "questionNum": 20,
+    "text": "If 5x + 7 = 22, what is the value of x?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctAnswer": "3"
+  },
+  {
+    "questionNum": 21,
+    "text": "What is the product of 6 and 9?",
+    "options": [
+      "48",
+      "54",
+      "56",
+      "60"
+    ],
+    "correctAnswer": "54"
+  },
+  {
+    "questionNum": 22,
+    "text": "If 2x - 4 = 12, what is the value of x?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correctAnswer": "8"
+  },
+  {
+    "questionNum": 23,
+    "text": "What is the sum of the first 10 positive integers?",
+    "options": [
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "correctAnswer": "55"
+  },
+  {
+    "questionNum": 24,
+    "text": "If 3x + 4 = 25, what is the value of x?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": "7"
+  },
+  {
+    "questionNum": 25,
+    "text": "What is the difference between 9 and 15?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctAnswer": "6"
+  }
+]

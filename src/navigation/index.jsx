@@ -10,12 +10,13 @@ import Register from '../screens/signUp/register';
 import TermsOfConditions from '../components/terms/termsCondition';
 import PrivacyPolicy from '../components/terms/privacyPolicy';
 import HomeScreen from '../screens/home';
+import Profile from '../screens/profile';
 
 const Stack = createStackNavigator();
 const StackNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SignIn">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Register"
           component={Register}
@@ -68,6 +69,13 @@ const StackNavigator = () => {
         <Stack.Screen
           name="PrivacyPolicy"
           component={PrivacyPolicy}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="profile"
+          component={Profile}
           options={{
             headerShown: false,
           }}

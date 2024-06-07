@@ -1,0 +1,278 @@
+[
+    {
+      "id": 1,
+      "question": "Explain the architecture of a React Native application and compare it with a React web application.",
+      "options": [
+        "React Native uses the native rendering APIs in Objective-C (iOS) and Java (Android) instead of relying on WebView.",
+        "React Native components are directly mapped to native components, whereas React web components render as HTML elements.",
+        "React Native uses a bridge to communicate between JavaScript and native code, enabling it to call native modules.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 2,
+      "question": "What is the purpose of the Metro bundler in React Native?",
+      "options": [
+        "It is used to compile JavaScript code into native code.",
+        "It bundles all JavaScript files into a single file to improve load times.",
+        "It transforms JavaScript code into a format that can be executed by the JavaScriptCore engine.",
+        "It is used to manage state in a React Native application."
+      ],
+      "correctAnswer": "It transforms JavaScript code into a format that can be executed by the JavaScriptCore engine."
+    },
+    {
+      "id": 3,
+      "question": "How does React Native handle animations differently from React for web?",
+      "options": [
+        "React Native uses native drivers for animations, improving performance.",
+        "React Native animations are handled entirely by the JavaScript thread.",
+        "React Native requires third-party libraries for all animations.",
+        "React Native does not support animations."
+      ],
+      "correctAnswer": "React Native uses native drivers for animations, improving performance."
+    },
+    {
+      "id": 4,
+      "question": "Describe the role of the 'Bridge' in React Native.",
+      "options": [
+        "It connects React Native components to the backend server.",
+        "It allows synchronous communication between JavaScript and native code.",
+        "It is responsible for rendering the UI components.",
+        "It allows asynchronous communication between JavaScript and native code."
+      ],
+      "correctAnswer": "It allows asynchronous communication between JavaScript and native code."
+    },
+    {
+      "id": 5,
+      "question": "Which method is used to handle touch events in React Native?",
+      "options": [
+        "onClick",
+        "onTouchEvent",
+        "onPress",
+        "onTap"
+      ],
+      "correctAnswer": "onPress"
+    },
+    {
+      "id": 6,
+      "question": "What are the main differences between React Native's FlatList and SectionList components?",
+      "options": [
+        "FlatList is used for single-level lists, while SectionList is used for grouped lists with headers.",
+        "FlatList supports infinite scrolling, while SectionList does not.",
+        "FlatList does not support item separators, while SectionList does.",
+        "There are no differences; they are interchangeable."
+      ],
+      "correctAnswer": "FlatList is used for single-level lists, while SectionList is used for grouped lists with headers."
+    },
+    {
+      "id": 7,
+      "question": "How do you implement deep linking in a React Native application?",
+      "options": [
+        "By using the Linking API to handle URL events.",
+        "By configuring the React Navigation library to recognize URL patterns.",
+        "By using the React Native Router library.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 8,
+      "question": "What are the advantages of using TypeScript in a React Native project?",
+      "options": [
+        "Improved code quality and maintainability.",
+        "Enhanced developer experience with better autocompletion and type checking.",
+        "Early detection of errors during development.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 9,
+      "question": "Explain how context API is used in React Native for state management.",
+      "options": [
+        "Context API allows passing data through the component tree without prop drilling.",
+        "Context API provides a way to share global data without using Redux.",
+        "Context API can be combined with useReducer for complex state management.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 10,
+      "question": "How does React Native handle code reusability between iOS and Android?",
+      "options": [
+        "React Native allows writing platform-specific code using the Platform module.",
+        "React Native provides a common set of components and APIs for both platforms.",
+        "React Native supports conditional imports based on the platform.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 11,
+      "question": "Describe the process of integrating native modules in a React Native application.",
+      "options": [
+        "Native modules are written in Java (Android) or Objective-C/Swift (iOS) and exposed to JavaScript through the bridge.",
+        "Native modules are bundled with the app and accessed through the NativeModules API.",
+        "Native modules can be used to extend React Native's functionality with platform-specific features.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 12,
+      "question": "What are the benefits of using the Expo SDK for React Native development?",
+      "options": [
+        "Simplified development process with built-in components and APIs.",
+        "Ability to deploy and test on both iOS and Android without a macOS machine.",
+        "Access to a wide range of third-party libraries and services.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 13,
+      "question": "Explain the difference between controlled and uncontrolled components in React Native.",
+      "options": [
+        "Controlled components rely on state to manage their value, while uncontrolled components manage their own state.",
+        "Controlled components use refs to access their value, while uncontrolled components use state.",
+        "Controlled components are only used in forms, while uncontrolled components can be used anywhere.",
+        "There is no difference between controlled and uncontrolled components."
+      ],
+      "correctAnswer": "Controlled components rely on state to manage their value, while uncontrolled components manage their own state."
+    },
+    {
+      "id": 14,
+      "question": "How do you handle global state management in a large React Native application?",
+      "options": [
+        "By using Redux for centralized state management.",
+        "By using Context API for sharing global state.",
+        "By combining Redux and Context API for optimized state management.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 15,
+      "question": "What is the role of the Hermes engine in React Native?",
+      "options": [
+        "Hermes is a JavaScript engine optimized for running React Native on Android.",
+        "Hermes improves app startup time and reduces memory usage.",
+        "Hermes provides better performance for complex animations.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 16,
+      "question": "Explain how to optimize the performance of a React Native application.",
+      "options": [
+        "By using FlatList for rendering long lists.",
+        "By avoiding unnecessary re-renders with React.memo and useCallback.",
+        "By using native drivers for animations.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 17,
+      "question": "How do you handle navigation in a React Native application?",
+      "options": [
+        "By using the React Navigation library.",
+        "By using the React Native Router library.",
+        "By managing state manually and conditionally rendering components.",
+        "All of the above"
+      ],
+      "correctAnswer": "By using the React Navigation library."
+    },
+    {
+      "id": 18,
+      "question": "What is the significance of the SafeAreaView component in React Native?",
+      "options": [
+        "It ensures that content is rendered within the safe area boundaries of a device.",
+        "It provides better performance for complex animations.",
+        "It is used to handle touch events.",
+        "It is used for state management."
+      ],
+      "correctAnswer": "It ensures that content is rendered within the safe area boundaries of a device."
+    },
+    {
+      "id": 19,
+      "question": "Describe the process of debugging a React Native application.",
+      "options": [
+        "By using the React Native Debugger or Chrome Developer Tools.",
+        "By using the Reactotron library for advanced debugging features.",
+        "By adding console.log statements and inspecting logs.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 20,
+      "question": "How does React Native handle different screen sizes and orientations?",
+      "options": [
+        "By using the Flexbox layout system for responsive design.",
+        "By using the Dimensions API to get screen width and height.",
+        "By using media queries in StyleSheet.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 21,
+      "question": "Explain the concept of 'reconciliation' in React Native.",
+      "options": [
+        "It is the process of updating the UI to match the new state.",
+        "It involves comparing the new virtual DOM with the previous one and applying the necessary changes.",
+        "It ensures that updates are applied efficiently to the native components.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 22,
+      "question": "What are the benefits of using CodePush in a React Native application?",
+      "options": [
+        "It allows instant updates to JavaScript code without requiring a full app store release.",
+        "It provides better performance for complex animations.",
+        "It ensures better compatibility with older devices.",
+        "All of the above"
+      ],
+      "correctAnswer": "It allows instant updates to JavaScript code without requiring a full app store release."
+    },
+    {
+      "id": 23,
+      "question": "How do you handle offline functionality in a React Native application?",
+      "options": [
+        "By using the Redux Offline library.",
+        "By using the AsyncStorage API to persist data locally.",
+        "By implementing network status checks and caching strategies.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 24,
+      "question": "What is the purpose of the 'keyExtractor' prop in FlatList?",
+      "options": [
+        "It is used to extract unique keys for each item in the list.",
+        "It improves the performance of the list by providing stable keys.",
+        "It helps React identify which items have changed, are added, or are removed.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "id": 25,
+      "question": "How do you handle accessibility in a React Native application?",
+      "options": [
+        "By using accessibility props such as accessible, accessibilityLabel, and accessibilityHint.",
+        "By ensuring that components are navigable using screen readers.",
+        "By testing the app with accessibility tools and making necessary adjustments.",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    }
+  ]
+  

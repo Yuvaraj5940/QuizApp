@@ -1,0 +1,278 @@
+[
+    {
+      "questionNum": 1,
+      "text": "What symbol is used for comments in Python?",
+      "options": [
+        "#",
+        "//",
+        "/*",
+        "--"
+      ],
+      "correctAnswer": "#"
+    },
+    {
+      "questionNum": 2,
+      "text": "Which keyword is used to define a function in Python?",
+      "options": [
+        "def",
+        "function",
+        "define",
+        "func"
+      ],
+      "correctAnswer": "def"
+    },
+    {
+      "questionNum": 3,
+      "text": "What function is used to get user input in Python?",
+      "options": [
+        "input()",
+        "get()",
+        "read()",
+        "user_input()"
+      ],
+      "correctAnswer": "input()"
+    },
+    {
+      "questionNum": 4,
+      "text": "Which data type is used to store a single character in Python?",
+      "options": [
+        "char",
+        "str",
+        "string",
+        "chr"
+      ],
+      "correctAnswer": "str"
+    },
+    {
+      "questionNum": 5,
+      "text": "What is the result of 2 + 2 in Python?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "4"
+    },
+    {
+      "questionNum": 6,
+      "text": "Which loop is used to iterate over a sequence of elements in Python?",
+      "options": [
+        "for loop",
+        "while loop",
+        "do-while loop",
+        "foreach loop"
+      ],
+      "correctAnswer": "for loop"
+    },
+    {
+      "questionNum": 7,
+      "text": "What is the output of 'print('Hello, world!')' in Python?",
+      "options": [
+        "Hello, world!",
+        "print('Hello, world!')",
+        "Error",
+        "Nothing"
+      ],
+      "correctAnswer": "Hello, world!"
+    },
+    {
+      "questionNum": 8,
+      "text": "What is the correct way to declare a variable in Python?",
+      "options": [
+        "variable x = 5",
+        "x = 5",
+        "int x = 5",
+        "5 = x"
+      ],
+      "correctAnswer": "x = 5"
+    },
+    {
+      "questionNum": 9,
+      "text": "What does the 'len()' function do in Python?",
+      "options": [
+        "Returns the length of a string",
+        "Returns the absolute value of a number",
+        "Returns the largest item in an iterable",
+        "Returns the smallest item in an iterable"
+      ],
+      "correctAnswer": "Returns the length of a string"
+    },
+    {
+      "questionNum": 10,
+      "text": "What is the correct way to create a list in Python?",
+      "options": [
+        "[1, 2, 3]",
+        "{1, 2, 3}",
+        "(1, 2, 3)",
+        "{1: 'a', 2: 'b', 3: 'c'}"
+      ],
+      "correctAnswer": "[1, 2, 3]"
+    },
+    {
+      "questionNum": 11,
+      "text": "What does the 'append()' method do in Python lists?",
+      "options": [
+        "Removes an element from the list",
+        "Adds an element to the end of the list",
+        "Sorts the list",
+        "Reverses the list"
+      ],
+      "correctAnswer": "Adds an element to the end of the list"
+    },
+    {
+      "questionNum": 12,
+      "text": "Which operator is used for exponentiation in Python?",
+      "options": [
+        "^",
+        "**",
+        "^^",
+        "//"
+      ],
+      "correctAnswer": "**"
+    },
+    {
+      "questionNum": 13,
+      "text": "What is the correct way to create a tuple in Python?",
+      "options": [
+        "(1, 2, 3)",
+        "[1, 2, 3]",
+        "{1, 2, 3}",
+        "{1: 'a', 2: 'b', 3: 'c'}"
+      ],
+      "correctAnswer": "(1, 2, 3)"
+    },
+    {
+      "questionNum": 14,
+      "text": "What is the output of 'print(10 % 3)' in Python?",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "0"
+      ],
+      "correctAnswer": "1"
+    },
+    {
+      "questionNum": 15,
+      "text": "Which keyword is used to exit a loop in Python?",
+      "options": [
+        "break",
+        "exit",
+        "continue",
+        "return"
+      ],
+      "correctAnswer": "break"
+    },
+    {
+      "questionNum": 16,
+      "text": "What is the correct way to access the value of a key in a dictionary in Python?",
+      "options": [
+        "dict[key]",
+        "dict.value(key)",
+        "dict[key].value",
+        "dict.get(key)"
+      ],
+      "correctAnswer": "dict[key]"
+    },
+    {
+      "questionNum": 17,
+      "text": "What is the result of '5 == 5' in Python?",
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "Nothing"
+      ],
+      "correctAnswer": "True"
+    },
+    {
+      "questionNum": 18,
+      "text": "Which of the following is not a valid variable name in Python?",
+      "options": [
+        "my_variable",
+        "my-variable",
+        "_my_variable",
+        "1myvariable"
+      ],
+      "correctAnswer": "1myvariable"
+    },
+    {
+      "questionNum": 19,
+      "text": "What is the correct way to convert a string to lowercase in Python?",
+      "options": [
+        "lower()",
+        "toLower()",
+        "tolower()",
+        "Lower()"
+      ],
+      "correctAnswer": "lower()"
+    },
+    {
+      "questionNum": 20,
+      "text": "What is the result of '3 * '2' in Python?",
+      "options": [
+        "6",
+        "32",
+        "Error",
+        "Nothing"
+      ],
+      "correctAnswer": "Error"
+    },
+    {
+      "questionNum": 21,
+      "text": "What is the correct way to remove an item from a list in Python?",
+      "options": [
+        "list.remove(item)",
+        "list.delete(item)",
+        "list.pop(item)",
+        "list.clear()"
+      ],
+      "correctAnswer": "list.remove(item)"
+    },
+    {
+      "questionNum": 22,
+      "text": "What is the correct way to check if a key exists in a dictionary in Python?",
+      "options": [
+        "key in dict",
+        "dict.key()",
+        "key.exists()",
+        "dict.hasKey()"
+      ],
+      "correctAnswer": "key in dict"
+    },
+    {
+      "questionNum": 23,
+      "text": "What is the result of 'True and False' in Python?",
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "Nothing"
+      ],
+      "correctAnswer": "False"
+    },
+    {
+      "questionNum": 24,
+      "text": "What is the correct way to concatenate two strings in Python?",
+      "options": [
+        "str1 . str2",
+        "str1 + str2",
+        "str1 & str2",
+        "str1 : str2"
+      ],
+      "correctAnswer": "str1 + str2"
+    },
+    {
+      "questionNum": 25,
+      "text": "What is the result of '10 / 3' in Python?",
+      "options": [
+        "3.3333333333333335",
+        "3",
+        "3.0",
+        "3.33"
+      ],
+      "correctAnswer": "3.3333333333333335"
+    }
+  ]
+  

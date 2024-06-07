@@ -1,0 +1,278 @@
+[
+    {
+      "questionNum": 1,
+      "text": "What is the output of the following code snippet?\n\n```\ndef func(x, y=3):\n    return x * y\n\nprint(func(4, 2))\n```",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "8"
+    },
+    {
+      "questionNum": 2,
+      "text": "Which of the following is used to open a file for reading and writing in Python?",
+      "options": [
+        "r",
+        "w",
+        "a",
+        "r+"
+      ],
+      "correctAnswer": "r+"
+    },
+    {
+      "questionNum": 3,
+      "text": "What does the 'pass' statement do in Python?",
+      "options": [
+        "Exits the loop",
+        "Continues to the next iteration of the loop",
+        "Stops the program",
+        "Does nothing"
+      ],
+      "correctAnswer": "Does nothing"
+    },
+    {
+      "questionNum": 4,
+      "text": "What does the 'map()' function do in Python?",
+      "options": [
+        "Returns a list of the same size as the input list",
+        "Returns a list of the same size as the input list, where each element is the result of applying the given function to the corresponding element of the input list",
+        "Returns the sum of the elements in the input list",
+        "Returns the maximum element in the input list"
+      ],
+      "correctAnswer": "Returns a list of the same size as the input list, where each element is the result of applying the given function to the corresponding element of the input list"
+    },
+    {
+      "questionNum": 5,
+      "text": "What is the output of the following code snippet?\n\n```\ndef foo(a, b):\n    return a * b\n\ndef bar(a, b):\n    return a + b\n\nresult = (foo if True else bar)(3, 5)\nprint(result)\n```",
+      "options": [
+        "15",
+        "8",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "15"
+    },
+    {
+      "questionNum": 6,
+      "text": "What is the purpose of using 'enumerate()' in Python?",
+      "options": [
+        "To iterate over the indices and values of a list",
+        "To reverse a list",
+        "To sort a list",
+        "To filter a list"
+      ],
+      "correctAnswer": "To iterate over the indices and values of a list"
+    },
+    {
+      "questionNum": 7,
+      "text": "What is the output of the following code snippet?\n\n```\ndef test(x, y=[]):\n    y.append(x)\n    return y\n\nprint(test(1))\nprint(test(2))\n```",
+      "options": [
+        "[1, 2]",
+        "[1]",
+        "[2]",
+        "[1, 2, 1, 2]"
+      ],
+      "correctAnswer": "[1]"
+    },
+    {
+      "questionNum": 8,
+      "text": "What is the purpose of the 'try' and 'except' blocks in Python?",
+      "options": [
+        "To define a function",
+        "To handle exceptions",
+        "To execute a block of code repeatedly",
+        "To create a loop"
+      ],
+      "correctAnswer": "To handle exceptions"
+    },
+    {
+      "questionNum": 9,
+      "text": "What is the output of the following code snippet?\n\n```\ndef func(a, b=5, c=10):\n    return a + b + c\n\nprint(func(1))\n```",
+      "options": [
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "correctAnswer": "16"
+    },
+    {
+      "questionNum": 10,
+      "text": "What is the purpose of the 'global' keyword in Python?",
+      "options": [
+        "To define a global variable",
+        "To declare a function",
+        "To access a global variable inside a function",
+        "To stop the execution of a program"
+      ],
+      "correctAnswer": "To access a global variable inside a function"
+    },
+    {
+      "questionNum": 11,
+      "text": "What is the output of the following code snippet?\n\n```\nprint('Hello, {}!'.format('world'))\n```",
+      "options": [
+        "Hello, world!",
+        "Hello, {}!",
+        "{}",
+        "Hello, world!{}"
+      ],
+      "correctAnswer": "Hello, world!"
+    },
+    {
+      "questionNum": 12,
+      "text": "What is the purpose of the 'lambda' keyword in Python?",
+      "options": [
+        "To define a class",
+        "To define a function",
+        "To define a variable",
+        "To define a list"
+      ],
+      "correctAnswer": "To define a function"
+    },
+    {
+      "questionNum": 13,
+      "text": "What is the output of the following code snippet?\n\n```\nprint(list(range(1, 5)))\n```",
+      "options": [
+        "[1, 2, 3, 4]",
+        "[0, 1, 2, 3, 4]",
+        "[1, 2, 3, 4, 5]",
+        "[0, 1, 2, 3]"
+      ],
+      "correctAnswer": "[1, 2, 3, 4]"
+    },
+    {
+      "questionNum": 14,
+      "text": "What does the 'sorted()' function do in Python?",
+      "options": [
+        "Returns a sorted list",
+        "Returns the maximum element in a list",
+        "Returns the sum of the elements in a list",
+        "Returns a reversed list"
+      ],
+      "correctAnswer": "Returns a sorted list"
+    },
+    {
+      "questionNum": 15,
+      "text": "What is the output of the following code snippet?\n\n```\nprint(''.join(['a', 'b', 'c']))\n```",
+      "options": [
+        "abc",
+        "a,b,c",
+        "['a', 'b', 'c']",
+        "Error"
+      ],
+      "correctAnswer": "abc"
+    },
+    {
+      "questionNum": 16,
+      "text": "What is the purpose of the 'with' statement in Python?",
+      "options": [
+        "To create a loop",
+        "To define a function",
+        "To handle exceptions",
+        "To manage resources"
+      ],
+      "correctAnswer": "To manage resources"
+    },
+    {
+      "questionNum": 17,
+      "text": "What is the output of the following code snippet?\n\n```\nprint(list(map(lambda x: x * x, [1, 2, 3, 4])))\n```",
+      "options": [
+        "[1, 4, 9, 16]",
+        "[2, 4, 6, 8]",
+        "[1, 3, 5, 7]",
+        "[2, 3, 4, 5]"
+      ],
+      "correctAnswer": "[1, 4, 9, 16]"
+    },
+    {
+      "questionNum": 18,
+      "text": "What is the purpose of the 'yield' keyword in Python?",
+      "options": [
+        "To stop the execution of a program",
+        "To return a value from a function",
+        "To define a generator",
+        "To define a list"
+      ],
+      "correctAnswer": "To define a generator"
+    },
+    {
+      "questionNum": 19,
+      "text": "What is the output of the following code snippet?\n\n```\ndef func(a, b):\n    return a - b\n\nresult = func(b=5, a=10)\nprint(result)\n```",
+      "options": [
+        "-5",
+        "5",
+        "10",
+        "-10"
+      ],
+      "correctAnswer": "5"
+    },
+    {
+      "questionNum": 20,
+      "text": "What is the purpose of the 'assert' statement in Python?",
+      "options": [
+        "To define a function",
+        "To create a loop",
+        "To handle exceptions",
+        "To check for conditions that must be true"
+      ],
+      "correctAnswer": "To check for conditions that must be true"
+    },
+    {
+      "questionNum": 21,
+      "text": "What is the output of the following code snippet?\n\n```\nprint(list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4])))\n```",
+      "options": [
+        "[1, 3]",
+        "[2, 4]",
+        "[1, 2, 3, 4]",
+        "[2, 3, 4]"
+      ],
+      "correctAnswer": "[2, 4]"
+    },
+    {
+      "questionNum": 22,
+      "text": "What is the purpose of the '__name__' variable in Python?",
+      "options": [
+        "To define a class",
+        "To define a function",
+        "To access the name of the current module",
+        "To access the name of the current function"
+      ],
+      "correctAnswer": "To access the name of the current module"
+    },
+    {
+      "questionNum": 23,
+      "text": "What is the output of the following code snippet?\n\n```\nprint(list(zip([1, 2, 3], ['a', 'b', 'c'])))\n```",
+      "options": [
+        "[(1, 'a'), (2, 'b'), (3, 'c')]",
+        "[[1, 'a'], [2, 'b'], [3, 'c']]",
+        "[1, 'a', 2, 'b', 3, 'c']",
+        "[1, 'a'], [2, 'b'], [3, 'c']"
+      ],
+      "correctAnswer": "[(1, 'a'), (2, 'b'), (3, 'c')]"
+    },
+    {
+      "questionNum": 24,
+      "text": "What is the purpose of the '__init__()' method in Python?",
+      "options": [
+        "To initialize a class",
+        "To define a function",
+        "To create an instance of a class",
+        "To access the name of the current module"
+      ],
+      "correctAnswer": "To initialize a class"
+    },
+    {
+      "questionNum": 25,
+      "text": "What is the output of the following code snippet?\n\n```\nprint(list(range(5)))\n```",
+      "options": [
+        "[0, 1, 2, 3, 4]",
+        "[1, 2, 3, 4, 5]",
+        "[0, 1, 2, 3]",
+        "[1, 2, 3, 4]"
+      ],
+      "correctAnswer": "[0, 1, 2, 3, 4]"
+    }
+  ]
+  

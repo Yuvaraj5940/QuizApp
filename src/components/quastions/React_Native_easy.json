@@ -1,0 +1,153 @@
+[
+    {
+      "questionNum": 1,
+      "text": "What is React Native primarily used for?",
+      "options": ["Web development", "Mobile app development", "Desktop app development", "Game development"],
+      "correctAnswer": "Mobile app development"
+    },
+    {
+      "questionNum": 2,
+      "text": "Which company developed React Native?",
+      "options": ["Google", "Microsoft", "Apple", "Facebook"],
+      "correctAnswer": "Facebook"
+    },
+    {
+      "questionNum": 3,
+      "text": "What is the primary programming language used in React Native?",
+      "options": ["Java", "Swift", "JavaScript", "Python"],
+      "correctAnswer": "JavaScript"
+    },
+    {
+      "questionNum": 4,
+      "text": "Which command is used to start a new React Native project?",
+      "options": ["npx react-native init", "npm create react-native-app", "create-react-native-app", "react-native new"],
+      "correctAnswer": "npx react-native init"
+    },
+    {
+      "questionNum": 5,
+      "text": "What is the default component used to create a text input in React Native?",
+      "options": ["<Input>", "<TextInput>", "<InputField>", "<TextField>"],
+      "correctAnswer": "<TextInput>"
+    },
+    {
+      "questionNum": 6,
+      "text": "Which component is used to render lists in React Native?",
+      "options": ["<FlatList>", "<ScrollView>", "<ListView>", "<RecyclerView>"],
+      "correctAnswer": "<FlatList>"
+    },
+    {
+      "questionNum": 7,
+      "text": "What is the purpose of the 'useState' hook in React Native?",
+      "options": ["To manage state in functional components", "To fetch data from APIs", "To navigate between screens", "To style components"],
+      "correctAnswer": "To manage state in functional components"
+    },
+    {
+      "questionNum": 8,
+      "text": "How can you create a stack navigator in React Native?",
+      "options": ["import { StackNavigator } from 'react-navigation'", "import { createStackNavigator } from '@react-navigation/stack'", "import StackNavigator from 'react-native-stack'", "import { Navigator } from 'react-stack'"],
+      "correctAnswer": "import { createStackNavigator } from '@react-navigation/stack'"
+    },
+    {
+      "questionNum": 9,
+      "text": "What does 'JSX' stand for?",
+      "options": ["JavaScript XML", "JavaScript Extension", "Java Source XML", "Java Standard Extension"],
+      "correctAnswer": "JavaScript XML"
+    },
+    {
+      "questionNum": 10,
+      "text": "Which lifecycle method is used to fetch data after a component is mounted?",
+      "options": ["componentWillMount", "componentDidMount", "componentDidUpdate", "componentWillUpdate"],
+      "correctAnswer": "componentDidMount"
+    },
+    {
+      "questionNum": 11,
+      "text": "How do you pass data between components in React Native?",
+      "options": ["Using props", "Using state", "Using context", "Using hooks"],
+      "correctAnswer": "Using props"
+    },
+    {
+      "questionNum": 12,
+      "text": "Which component is used for touch handling in React Native?",
+      "options": ["<Button>", "<TouchableOpacity>", "<Pressable>", "<TouchHandler>"],
+      "correctAnswer": "<TouchableOpacity>"
+    },
+    {
+      "questionNum": 13,
+      "text": "What is the purpose of the 'useEffect' hook?",
+      "options": ["To handle side effects in functional components", "To manage state", "To create navigation", "To render lists"],
+      "correctAnswer": "To handle side effects in functional components"
+    },
+    {
+      "questionNum": 14,
+      "text": "Which package is used to navigate between screens in a React Native app?",
+      "options": ["react-native-navigation", "react-navigation", "react-router-native", "react-native-router"],
+      "correctAnswer": "react-navigation"
+    },
+    {
+      "questionNum": 15,
+      "text": "What is the command to run a React Native app on an iOS simulator?",
+      "options": ["npm run ios", "npx react-native run-ios", "npm start ios", "react-native run-ios"],
+      "correctAnswer": "npx react-native run-ios"
+    },
+    {
+      "questionNum": 16,
+      "text": "How do you import the core React library in a React Native component?",
+      "options": ["import React from 'react-native'", "import React from 'react-core'", "import React from 'react'", "import React from 'core-react'"],
+      "correctAnswer": "import React from 'react'"
+    },
+    {
+      "questionNum": 17,
+      "text": "What is the default flex direction in React Native?",
+      "options": ["row", "column", "row-reverse", "column-reverse"],
+      "correctAnswer": "column"
+    },
+    {
+      "questionNum": 18,
+      "text": "Which component is used to create a scrollable container?",
+      "options": ["<View>", "<ScrollView>", "<FlatList>", "<Container>"],
+      "correctAnswer": "<ScrollView>"
+    },
+    {
+      "questionNum": 19,
+      "text": "How do you apply styles in a React Native component?",
+      "options": ["Using CSS", "Using inline styles", "Using the StyleSheet API", "Using the Styles API"],
+      "correctAnswer": "Using the StyleSheet API"
+    },
+    {
+      "questionNum": 20,
+      "text": "Which component is used to display an image in React Native?",
+      "options": ["<ImageView>", "<Picture>", "<Image>", "<Img>"],
+      "correctAnswer": "<Image>"
+    },
+    {
+      "questionNum": 21,
+      "text": "What does 'Expo' provide for React Native development?",
+      "options": ["A set of tools and services for building React Native apps", "A new programming language", "A new framework for web development", "An alternative to React"],
+      "correctAnswer": "A set of tools and services for building React Native apps"
+    },
+    {
+      "questionNum": 22,
+      "text": "How do you handle device-specific code in React Native?",
+      "options": ["Using platform-specific extensions (.ios.js, .android.js)", "Using if statements", "Using separate files for each platform", "Using the Platform API"],
+      "correctAnswer": "Using platform-specific extensions (.ios.js, .android.js)"
+    },
+    {
+      "questionNum": 23,
+      "text": "Which command is used to run a React Native app on an Android emulator?",
+      "options": ["npm run android", "npx react-native run-android", "npm start android", "react-native run-android"],
+      "correctAnswer": "npx react-native run-android"
+    },
+    {
+      "questionNum": 24,
+      "text": "What is the purpose of the 'StyleSheet.create' method?",
+      "options": ["To create stylesheets", "To optimize style objects", "To define global styles", "To create CSS files"],
+      "correctAnswer": "To optimize style objects"
+    },
+    {
+      "questionNum": 25,
+      "text": "What is the command to install the React Navigation library?",
+      "options": ["npm install react-navigation", "npm install @react-navigation/native", "npm install react-native-navigation", "npm install navigation-react-native"],
+      "correctAnswer": "npm install @react-navigation/native"
+    }
+  ]
+  

@@ -1,0 +1,278 @@
+[
+    {
+      "questionNum": 1,
+      "text": "What is Git?",
+      "options": [
+        "A version control system",
+        "A programming language",
+        "A text editor",
+        "A cloud storage service"
+      ],
+      "correctAnswer": "A version control system"
+    },
+    {
+      "questionNum": 2,
+      "text": "Which command is used to initialize a new Git repository?",
+      "options": [
+        "git start",
+        "git init",
+        "git create",
+        "git new"
+      ],
+      "correctAnswer": "git init"
+    },
+    {
+      "questionNum": 3,
+      "text": "What does the 'commit' command do?",
+      "options": [
+        "Saves changes to the repository",
+        "Creates a new branch",
+        "Merges branches",
+        "Deletes a branch"
+      ],
+      "correctAnswer": "Saves changes to the repository"
+    },
+    {
+      "questionNum": 4,
+      "text": "How do you check the current status of your Git repository?",
+      "options": [
+        "git status",
+        "git check",
+        "git info",
+        "git state"
+      ],
+      "correctAnswer": "git status"
+    },
+    {
+      "questionNum": 5,
+      "text": "Which command is used to add changes to the staging area?",
+      "options": [
+        "git add",
+        "git stage",
+        "git commit",
+        "git push"
+      ],
+      "correctAnswer": "git add"
+    },
+    {
+      "questionNum": 6,
+      "text": "How do you create a new branch in Git?",
+      "options": [
+        "git branch <branch-name>",
+        "git new <branch-name>",
+        "git create <branch-name>",
+        "git init <branch-name>"
+      ],
+      "correctAnswer": "git branch <branch-name>"
+    },
+    {
+      "questionNum": 7,
+      "text": "How do you switch to a different branch in Git?",
+      "options": [
+        "git switch <branch-name>",
+        "git checkout <branch-name>",
+        "git change <branch-name>",
+        "git move <branch-name>"
+      ],
+      "correctAnswer": "git checkout <branch-name>"
+    },
+    {
+      "questionNum": 8,
+      "text": "Which command is used to merge branches in Git?",
+      "options": [
+        "git merge",
+        "git join",
+        "git combine",
+        "git integrate"
+      ],
+      "correctAnswer": "git merge"
+    },
+    {
+      "questionNum": 9,
+      "text": "How do you view the commit history in Git?",
+      "options": [
+        "git history",
+        "git log",
+        "git commits",
+        "git track"
+      ],
+      "correctAnswer": "git log"
+    },
+    {
+      "questionNum": 10,
+      "text": "Which command is used to clone a remote repository?",
+      "options": [
+        "git clone",
+        "git copy",
+        "git duplicate",
+        "git download"
+      ],
+      "correctAnswer": "git clone"
+    },
+    {
+      "questionNum": 11,
+      "text": "How do you push changes to a remote repository?",
+      "options": [
+        "git push",
+        "git send",
+        "git upload",
+        "git commit"
+      ],
+      "correctAnswer": "git push"
+    },
+    {
+      "questionNum": 12,
+      "text": "Which file can be used to ignore specific files or directories in Git?",
+      "options": [
+        ".gitignore",
+        ".gitexclude",
+        ".gitignorefile",
+        ".githidden"
+      ],
+      "correctAnswer": ".gitignore"
+    },
+    {
+      "questionNum": 13,
+      "text": "How do you remove a file from the staging area in Git?",
+      "options": [
+        "git remove <file>",
+        "git unstage <file>",
+        "git rm --cached <file>",
+        "git delete --cached <file>"
+      ],
+      "correctAnswer": "git rm --cached <file>"
+    },
+    {
+      "questionNum": 14,
+      "text": "Which command is used to fetch updates from a remote repository without merging?",
+      "options": [
+        "git fetch",
+        "git pull",
+        "git get",
+        "git download"
+      ],
+      "correctAnswer": "git fetch"
+    },
+    {
+      "questionNum": 15,
+      "text": "What does 'HEAD' refer to in Git?",
+      "options": [
+        "The latest commit on the current branch",
+        "The main branch",
+        "The first commit in the repository",
+        "The remote repository"
+      ],
+      "correctAnswer": "The latest commit on the current branch"
+    },
+    {
+      "questionNum": 16,
+      "text": "How do you discard changes in your working directory?",
+      "options": [
+        "git discard",
+        "git reset",
+        "git checkout -- <file>",
+        "git clean"
+      ],
+      "correctAnswer": "git checkout -- <file>"
+    },
+    {
+      "questionNum": 17,
+      "text": "How do you rename a branch in Git?",
+      "options": [
+        "git branch -m <new-name>",
+        "git rename <new-name>",
+        "git branch --rename <new-name>",
+        "git change-branch <new-name>"
+      ],
+      "correctAnswer": "git branch -m <new-name>"
+    },
+    {
+      "questionNum": 18,
+      "text": "Which command is used to view changes between commits, commit and working tree, etc.?",
+      "options": [
+        "git diff",
+        "git compare",
+        "git changes",
+        "git view"
+      ],
+      "correctAnswer": "git diff"
+    },
+    {
+      "questionNum": 19,
+      "text": "How do you delete a branch in Git?",
+      "options": [
+        "git branch -d <branch-name>",
+        "git delete <branch-name>",
+        "git remove <branch-name>",
+        "git branch --delete <branch-name>"
+      ],
+      "correctAnswer": "git branch -d <branch-name>"
+    },
+    {
+      "questionNum": 20,
+      "text": "What does the command 'git stash' do?",
+      "options": [
+        "Saves changes temporarily",
+        "Commits changes to the repository",
+        "Deletes untracked files",
+        "Switches to another branch"
+      ],
+      "correctAnswer": "Saves changes temporarily"
+    },
+    {
+      "questionNum": 21,
+      "text": "Which command is used to apply stashed changes in Git?",
+      "options": [
+        "git stash apply",
+        "git stash pop",
+        "git stash use",
+        "git stash add"
+      ],
+      "correctAnswer": "git stash apply"
+    },
+    {
+      "questionNum": 22,
+      "text": "How do you view a list of stashes in Git?",
+      "options": [
+        "git stash list",
+        "git stash show",
+        "git stash view",
+        "git stash log"
+      ],
+      "correctAnswer": "git stash list"
+    },
+    {
+      "questionNum": 23,
+      "text": "How do you remove a file from the working directory and staging area?",
+      "options": [
+        "git rm <file>",
+        "git remove <file>",
+        "git delete <file>",
+        "git discard <file>"
+      ],
+      "correctAnswer": "git rm <file>"
+    },
+    {
+      "questionNum": 24,
+      "text": "What is the default branch name in Git?",
+      "options": [
+        "main",
+        "master",
+        "default",
+        "primary"
+      ],
+      "correctAnswer": "main"
+    },
+    {
+      "questionNum": 25,
+      "text": "How do you set a remote repository URL in Git?",
+      "options": [
+        "git remote set-url",
+        "git remote add-url",
+        "git remote change-url",
+        "git remote new-url"
+      ],
+      "correctAnswer": "git remote set-url"
+    }
+  ]
+  

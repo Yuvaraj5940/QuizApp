@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -7,29 +7,30 @@ import {
   StyleSheet,
   Alert,
   ActivityIndicator,
-} from "react-native";
-import { useSelector, useDispatch } from "react-redux";
+} from 'react-native';
+import {useSelector, useDispatch} from 'react-redux';
 import {
   resetQuiz,
   setAnswerAtIndex,
   setCurrentQuestionIndex,
   setScore,
-} from "../../store/slices/quizSlice";
-import { COLORS, FONTSIZE, SPACING } from "../../theme/theme";
-import CustomModal from "../model/CustomModal";
-import questions from "../../components/quastions/Quations.json";
-import NetInfo from "@react-native-community/netinfo";
-import NetworkError from "../../screens/network";
+} from '../../store/slices/quizSlice';
+import {COLORS, FONTSIZE, SPACING} from '../../theme/theme';
+import CustomModal from '../model/CustomModal';
+// import questions from "../../components/quastions/Quations.json";
+import NetInfo from '@react-native-community/netinfo';
+import NetworkError from '../../screens/network';
 
-const QuizScreen = ({ navigation }) => {
+const QuizScreen = ({navigation}) => {
   const [refreshing, setRefreshing] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
   const dispatch = useDispatch();
   const currentQuestionIndex = useSelector(
-    (state) => state.quiz.currentQuestionIndex
+    state => state.quiz.currentQuestionIndex,
   );
+  const quizArray = useSelector(state => state.quiz.QuizArray);
 
-  const score = useSelector((state) => state.quiz.score);
+  const score = useSelector(state => state.quiz.score);
   const [startTime, setStartTime] = useState(Date.now());
   const [modalVisible, setModalVisible] = useState(false);
   const [remainingTime, setRemainingTime] = useState(20); // countdown timer
@@ -45,15 +46,15 @@ const QuizScreen = ({ navigation }) => {
     };
 
     const backHandler = BackHandler.addEventListener(
-      "hardwareBackPress",
-      backAction
+      'hardwareBackPress',
+      backAction,
     );
 
     return () => backHandler.remove();
   }, []);
 
   useEffect(() => {
-    const unsubscribe = NetInfo.addEventListener((state) => {
+    const unsubscribe = NetInfo.addEventListener(state => {
       setIsConnected(state.isConnected);
     });
 
@@ -63,29 +64,31 @@ const QuizScreen = ({ navigation }) => {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      handleNextQuestion();
-    }, 20000);
+    if (quizArray?.length > 1) {
+      const timer = setTimeout(() => {
+        handleNextQuestion();
+      }, 20000);
 
-    const interval = setInterval(() => {
-      setRemainingTime((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
+      const interval = setInterval(() => {
+        setRemainingTime(prev => (prev > 0 ? prev - 1 : 0));
+      }, 1000);
 
-    return () => {
-      clearTimeout(timer);
-      clearInterval(interval);
-      setRemainingTime(20);
-    };
+      return () => {
+        clearTimeout(timer);
+        clearInterval(interval);
+        setRemainingTime(20);
+      };
+    }
   }, [currentQuestionIndex]);
 
   const handleNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
+    if (currentQuestionIndex < quizArray?.length - 1) {
       dispatch(setCurrentQuestionIndex(currentQuestionIndex + 1));
     } else {
-      dispatch(setAnswerAtIndex({ index: questions.length - 1, undefined}));
-      navigation.navigate("Result", {
+      dispatch(setAnswerAtIndex({index: quizArray?.length - 1, undefined}));
+      navigation.navigate('Result', {
         score,
-        TotalScore: questions.length,
+        TotalScore: quizArray?.length,
       });
     }
   };
@@ -94,7 +97,7 @@ const QuizScreen = ({ navigation }) => {
     const endTime = Date.now();
     const timeTaken = (endTime - startTime) / 1000; // in seconds
     const maxTime = 50; // seconds
-    const question = questions[currentQuestionIndex];
+    const question = quizArray[currentQuestionIndex];
     const basePoints = (maxTime - timeTaken) * 20000;
     let points = 0;
 
@@ -103,9 +106,8 @@ const QuizScreen = ({ navigation }) => {
       // if(index){
       //   dispatch(setAnswerAtIndex({ index: currentQuestionIndex, option }));
       // }
-
     }
-    dispatch(setAnswerAtIndex({ index: currentQuestionIndex, option }));
+    dispatch(setAnswerAtIndex({index: currentQuestionIndex, option}));
     dispatch(setScore(score + points));
     handleNextQuestion();
   };
@@ -120,41 +122,49 @@ const QuizScreen = ({ navigation }) => {
     navigation.goBack();
   };
 
-  const question = questions[currentQuestionIndex];
+  const question = quizArray[currentQuestionIndex];
 
   return (
     <>
       {isConnected && !refreshing ? (
-        <View style={styles.container}>
-          <View style={styles.questionContainer}>
-            <Text style={styles.questionNumber}>{question.questionNum}. </Text>
-            <Text style={styles.questionText}>{question.text}</Text>
-          </View>
-          <Text style={styles.timerText}>Time remaining: {remainingTime}s</Text>
-          <View style={styles.optionsContainer}>
-            {question.options.map((option, index) => (
-              <TouchableOpacity
-                style={styles.optionButton}
-                key={index}
-                onPress={() => handleAnswer(option, index)}
-              >
-                <Text style={styles.optionText}>{option}</Text>
-              </TouchableOpacity>
-            ))}
-          </View>
+        <>
+          {quizArray?.length > 1 ? (
+            <View style={styles.container}>
+              <View style={styles.questionContainer}>
+                <Text style={styles.questionNumber}>
+                  {question.questionNum}.{' '}
+                </Text>
+                <Text style={styles.questionText}>{question.text}</Text>
+              </View>
+              <Text style={styles.timerText}>
+                Time remaining: {remainingTime}s
+              </Text>
+              <View style={styles.optionsContainer}>
+                {question.options.map((option, index) => (
+                  <TouchableOpacity
+                    style={styles.optionButton}
+                    key={index}
+                    onPress={() => handleAnswer(option, index)}>
+                    <Text style={styles.optionText}>{option}</Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </View>
+          ) : (
+            <Text>Go Back and select once again</Text>
+          )}
 
           <CustomModal
             visible={modalVisible}
             onClose={handleModalClose}
             onYes={handleModalYes}
-            title="Exit Quiz"
-          >
+            title="Exit Quiz">
             <Text>
               Are you sure you want to exit the quiz? Your progress will be
               lost.
             </Text>
           </CustomModal>
-        </View>
+        </>
       ) : (
         <>
           {!isConnected && !refreshing ? (
@@ -187,31 +197,31 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.LightGray,
   },
   questionContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginBottom: SPACING.space_12,
     padding: SPACING.space_12,
     backgroundColor: COLORS.White,
     borderRadius: 8,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.2,
     shadowRadius: 2,
     elevation: 4,
   },
   questionNumber: {
     fontSize: FONTSIZE.size_20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     color: COLORS.Primary,
   },
   questionText: {
     fontSize: FONTSIZE.size_18,
     color: COLORS.Black,
-    flexWrap: "wrap",
+    flexWrap: 'wrap',
     flex: 1,
   },
   optionsContainer: {
     gap: SPACING.space_12,
-    justifyContent: "flex-start",
+    justifyContent: 'flex-start',
     marginTop: SPACING.space_12,
   },
   optionButton: {
@@ -219,9 +229,9 @@ const styles = StyleSheet.create({
     padding: SPACING.space_12,
     marginVertical: SPACING.space_4,
     borderRadius: 8,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.2,
     shadowRadius: 2,
     elevation: 4,
@@ -229,18 +239,18 @@ const styles = StyleSheet.create({
   optionText: {
     color: COLORS.White,
     fontSize: FONTSIZE.size_18,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   timerText: {
     fontSize: FONTSIZE.size_16,
     color: COLORS.Red,
-    alignSelf: "center",
+    alignSelf: 'center',
     marginTop: SPACING.space_8,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   indicator: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
