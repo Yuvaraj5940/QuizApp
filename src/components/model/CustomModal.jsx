@@ -1,11 +1,12 @@
 import React from 'react';
 import { Modal, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { COLORS, FONTSIZE, SPACING } from '../../theme/theme'; // Ensure you import your theme
 
 const CustomModal = ({ visible, onClose, onYes, title, children }) => {
   return (
     <Modal
       transparent={true}
-      animationType="slide"
+      animationType="fade"
       visible={visible}
       onRequestClose={onClose}
     >
@@ -16,10 +17,10 @@ const CustomModal = ({ visible, onClose, onYes, title, children }) => {
             {children}
           </View>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.button} onPress={onYes}>
+            <TouchableOpacity style={styles.yesButton} onPress={onYes}>
               <Text style={styles.buttonText}>Yes</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={onClose}>
+            <TouchableOpacity style={styles.noButton} onPress={onClose}>
               <Text style={styles.buttonText}>No</Text>
             </TouchableOpacity>
           </View>
@@ -34,51 +35,59 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
   },
   modalContainer: {
-    width: '80%',
-    backgroundColor: '#fff',
-    borderRadius: 20,
-    padding: 20,
+    width: '85%',
+    backgroundColor: COLORS.White,
+    borderRadius: 10,
+    padding: SPACING.space_20,
     alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
+    shadowColor: COLORS.Black,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
     elevation: 5,
   },
   modalTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 15,
+    fontSize: FONTSIZE.size_22,
+    fontWeight: '600',
+    marginBottom: SPACING.space_10,
     textAlign: 'center',
-    color: '#333',
+    color: COLORS.PrimaryDark,
   },
   modalContent: {
-    marginBottom: 20,
+    marginBottom: SPACING.space_20,
     alignItems: 'center',
+    paddingHorizontal: SPACING.space_10,
   },
   buttonContainer: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     width: '100%',
   },
-  button: {
-    backgroundColor: '#6200EE',
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 20,
-    marginHorizontal: 10,
+  yesButton: {
+    backgroundColor: COLORS.Success,
+    paddingVertical: SPACING.space_12,
+    paddingHorizontal: SPACING.space_24,
+    borderRadius: 10,
+    marginHorizontal: SPACING.space_8,
     alignItems: 'center',
+    flex: 1,
+  },
+  noButton: {
+    backgroundColor: COLORS.Danger,
+    paddingVertical: SPACING.space_12,
+    paddingHorizontal: SPACING.space_24,
+    borderRadius: 10,
+    marginHorizontal: SPACING.space_8,
+    alignItems: 'center',
+    flex: 1,
   },
   buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
+    color: COLORS.White,
+    fontSize: FONTSIZE.size_16,
+    fontWeight: '600',
   },
 });
 

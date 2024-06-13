@@ -25,7 +25,15 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {globalStyles} from '../../styles/globalStyles';
 import {resetQuiz, setQuizArray} from '../../store/slices/quizSlice';
 import {useDispatch, useSelector} from 'react-redux';
-import questions from '../../components/quastions/Quations.json';
+import Aptitude_easy from '../../components/quastions/Aptitude_easy.json';
+import Aptitude_medium from '../../components/quastions/Aptitude_medium.json';
+import Aptitude_hard from '../../components/quastions/Aptitude_hard.json';
+import Python_easy from '../../components/quastions/Python_easy.json';
+import Python_medium from '../../components/quastions/Python_medim.json';
+import Python_hard from '../../components/quastions/Python_hard.json';
+import Git_easy from '../../components/quastions/Git_easy.json';
+import Git_medium from '../../components/quastions/Git_average.json';
+import Git_hard from '../../components/quastions/Git_hard.json';
 import React_native_easy from '../../components/quastions/React_Native_easy.json';
 import React_native_Average from '../../components/quastions/React_Native_medium.json';
 import React_native_hard from '../../components/quastions/React_native_hard.json';
@@ -37,10 +45,10 @@ const HomeScreen = ({navigation}) => {
   const [menuVisible, setModalMenuVisible] = useState(false);
   const [selectmodel, setSelectmodel] = useState(false);
   const [visible, setVisible] = useState('');
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState([]);
   const dispatch = useDispatch();
   const quizArray = useSelector(state => state.quiz.QuizArray);
-  console.log('=======================', quizArray);
+  // console.log('=======================', quizArray);
   useEffect(() => {
     const backAction = () => {
       navigation.canGoBack(false);
@@ -74,7 +82,6 @@ const HomeScreen = ({navigation}) => {
     setModalVisible(false);
     dispatch(resetQuiz());
     BackHandler.exitApp();
-
   };
   const handleSelectClose = () => {
     setSelectmodel(false);
@@ -168,7 +175,7 @@ const HomeScreen = ({navigation}) => {
   ];
   const handleLoad = (id, data, name) => {
     console.log('you have selected', id, data);
-    setTitle(pre => `${name} with priority ${data.name}`);
+    setTitle(pre => [`${name}`, `${data.name}`]);
     switch (id) {
       case 1:
         console.log('React Native selected:', data);
@@ -184,31 +191,31 @@ const HomeScreen = ({navigation}) => {
       case 2:
         console.log('Electronics selected:', data);
         if (data.name === 'Simple') {
-          dispatch(setQuizArray(React_native_easy));
+          dispatch(setQuizArray(Git_easy));
         } else if (data.name === 'Average') {
-          dispatch(setQuizArray(React_native_easy));
+          dispatch(setQuizArray(Git_medium));
         } else if (data.name === 'Hard') {
-          dispatch(setQuizArray(React_native_easy));
+          dispatch(setQuizArray(Git_hard));
         }
         break;
       case 3:
         console.log('Furniture selected:', data);
         if (data.name === 'Simple') {
-          dispatch(setQuizArray(React_native_easy));
+          dispatch(setQuizArray(Python_easy));
         } else if (data.name === 'Average') {
-          dispatch(setQuizArray(React_native_easy));
+          dispatch(setQuizArray(Python_medium));
         } else if (data.name === 'Hard') {
-          dispatch(setQuizArray(React_native_easy));
+          dispatch(setQuizArray(Python_hard));
         }
         break;
       case 4:
         console.log('Cleaning Supplies selected:', data);
         if (data.name === 'Simple') {
-          dispatch(setQuizArray(React_native_easy));
+          dispatch(setQuizArray(Aptitude_easy));
         } else if (data.name === 'Average') {
-          dispatch(setQuizArray(React_native_easy));
+          dispatch(setQuizArray(Aptitude_medium));
         } else if (data.name === 'Hard') {
-          dispatch(setQuizArray(React_native_easy));
+          dispatch(setQuizArray(Aptitude_hard));
         }
         break;
       default:
@@ -232,7 +239,6 @@ const HomeScreen = ({navigation}) => {
                 </TouchableOpacity>
               </View>
               <View style={[globalStyles.headerTxtWrapTwo]}>
-
                 <Text style={styles.logoImg}>HOME</Text>
               </View>
               <View style={[globalStyles.topRightIcon]}>
@@ -311,7 +317,11 @@ const HomeScreen = ({navigation}) => {
             onClose={handleSelectClose}
             onYes={handleSelectModalYes}
             title="You selected ">
-            <Text>{title}</Text>
+            <Text style={{fontWeight: 'bold'}}>
+              {title[0]}
+              <Text style={{fontWeight: '400'}}> with priority </Text>
+              {title[1]}
+            </Text>
           </CustomModal>
 
           <Modal
@@ -331,10 +341,7 @@ const HomeScreen = ({navigation}) => {
                   <View style={styles.menuBoxLogo}>
                     <Text>Side Menu</Text>
                   </View>
-                  <TouchableOpacity
-                    onPress={() => {
-
-                    }}>
+                  <TouchableOpacity onPress={() => {}}>
                     <Icon name="settings" size={22} color="#080808" />
                   </TouchableOpacity>
                 </View>
@@ -444,8 +451,8 @@ const styles = StyleSheet.create({
   menuBoxLogo: {
     // width: 200,
     // height: 20,
-    width: 190,
-    height: 12,
+    width: 200,
+    height: 20,
   },
   menuAccordion: {
     padding: 20,

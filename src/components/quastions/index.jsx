@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -8,28 +8,29 @@ import {
   Alert,
   ActivityIndicator,
 } from 'react-native';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   resetQuiz,
   setAnswerAtIndex,
   setCurrentQuestionIndex,
   setScore,
 } from '../../store/slices/quizSlice';
-import {COLORS, FONTSIZE, SPACING} from '../../theme/theme';
+import { COLORS, FONTSIZE, SPACING } from '../../theme/theme';
 import CustomModal from '../model/CustomModal';
-// import questions from "../../components/quastions/Quations.json";
 import NetInfo from '@react-native-community/netinfo';
 import NetworkError from '../../screens/network';
+import Icon from 'react-native-vector-icons/FontAwesome6';
 
-const QuizScreen = ({navigation}) => {
+
+const QuizScreen = ({ navigation }) => {
   const [refreshing, setRefreshing] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
   const dispatch = useDispatch();
   const currentQuestionIndex = useSelector(
     state => state.quiz.currentQuestionIndex,
   );
   const quizArray = useSelector(state => state.quiz.QuizArray);
-
   const score = useSelector(state => state.quiz.score);
   const [startTime, setStartTime] = useState(Date.now());
   const [modalVisible, setModalVisible] = useState(false);
@@ -37,6 +38,7 @@ const QuizScreen = ({navigation}) => {
 
   useEffect(() => {
     setStartTime(Date.now());
+    setSelectedOption(null); // Reset selected option on new question
   }, [currentQuestionIndex]);
 
   useEffect(() => {
@@ -85,7 +87,7 @@ const QuizScreen = ({navigation}) => {
     if (currentQuestionIndex < quizArray?.length - 1) {
       dispatch(setCurrentQuestionIndex(currentQuestionIndex + 1));
     } else {
-      dispatch(setAnswerAtIndex({index: quizArray?.length - 1, undefined}));
+      dispatch(setAnswerAtIndex({ index: quizArray?.length - 1, option: undefined }));
       navigation.navigate('Result', {
         score,
         TotalScore: quizArray?.length,
@@ -103,13 +105,12 @@ const QuizScreen = ({navigation}) => {
 
     if (option === question.correctAnswer) {
       points = points + 1;
-      // if(index){
-      //   dispatch(setAnswerAtIndex({ index: currentQuestionIndex, option }));
-      // }
     }
-    dispatch(setAnswerAtIndex({index: currentQuestionIndex, option}));
+
+    setSelectedOption(option);
+    dispatch(setAnswerAtIndex({ index: currentQuestionIndex, option }));
     dispatch(setScore(score + points));
-    handleNextQuestion();
+    setTimeout(handleNextQuestion, 500); // Delay to show the selected option color
   };
 
   const handleModalClose = () => {
@@ -136,22 +137,37 @@ const QuizScreen = ({navigation}) => {
                 </Text>
                 <Text style={styles.questionText}>{question.text}</Text>
               </View>
+              <View style={{width:'100%',height:20, 
+            }}>
+
               <Text style={styles.timerText}>
-                Time remaining: {remainingTime}s
+               
+                <Icon name="stopwatch-20" size={16} color="#F60003" />
+               {' '}: {remainingTime}s
               </Text>
+              </View>
               <View style={styles.optionsContainer}>
                 {question.options.map((option, index) => (
                   <TouchableOpacity
-                    style={styles.optionButton}
+                    style={[
+                      styles.optionButton,
+                      selectedOption === option && styles.selectedOptionButton,
+                    ]}
                     key={index}
                     onPress={() => handleAnswer(option, index)}>
-                    <Text style={styles.optionText}>{option}</Text>
+                    <Text
+                      style={[
+                        styles.optionText,
+                        selectedOption === option && styles.selectedOptionText,
+                      ]}>
+                      {option}
+                    </Text>
                   </TouchableOpacity>
                 ))}
               </View>
             </View>
           ) : (
-            <Text>Go Back and select once again</Text>
+            <Text style={styles.errorText}>Go back and select once again</Text>
           )}
 
           <CustomModal
@@ -160,8 +176,7 @@ const QuizScreen = ({navigation}) => {
             onYes={handleModalYes}
             title="Exit Quiz">
             <Text>
-              Are you sure you want to exit the quiz? Your progress will be
-              lost.
+              Are you sure you want to exit the quiz? Your progress will be lost.
             </Text>
           </CustomModal>
         </>
@@ -194,16 +209,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: SPACING.space_18,
-    backgroundColor: COLORS.LightGray,
+    backgroundColor: '#f7f7f7',
   },
   questionContainer: {
     flexDirection: 'row',
     marginBottom: SPACING.space_12,
     padding: SPACING.space_12,
-    backgroundColor: COLORS.White,
+    backgroundColor: '#fff',
     borderRadius: 8,
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
     elevation: 4,
@@ -225,32 +240,47 @@ const styles = StyleSheet.create({
     marginTop: SPACING.space_12,
   },
   optionButton: {
-    backgroundColor: COLORS.opGrey,
+    backgroundColor: '#d3d3d3',
     padding: SPACING.space_12,
     marginVertical: SPACING.space_4,
     borderRadius: 8,
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
     elevation: 4,
   },
+  selectedOptionButton: {
+    backgroundColor: COLORS.Primary,
+  },
   optionText: {
-    color: COLORS.White,
+    color: '#333',
     fontSize: FONTSIZE.size_18,
     fontWeight: 'bold',
   },
+  selectedOptionText: {
+    color: '#fff',
+  },
   timerText: {
-    fontSize: FONTSIZE.size_16,
+    // fontSize: FONTSIZE.size_16,
     color: COLORS.Red,
     alignSelf: 'center',
-    marginTop: SPACING.space_8,
-    fontWeight: 'bold',
+    // marginTop: SPACING.space_8,
+    // fontWeight: 'bold',
+    alignSelf:'flex-end',
+    justifyContent:"center",
+    flexWrap:'wrap',
   },
   indicator: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  errorText: {
+    fontSize: FONTSIZE.size_18,
+    color: COLORS.Red,
+    textAlign: 'center',
+    marginTop: SPACING.space_12,
   },
 });

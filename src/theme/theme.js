@@ -40,7 +40,13 @@
     LightGrey:'#D3D3D3',
     opGrey:'#808080',
     Red:'#F60003',
-    Coral:'#FF7F50'
+    Coral:'#FF7F50',
+  Primary: '#6200EE',
+  PrimaryDark: '#3700B3',
+  LightGray: '#F5F5F5',
+  Success: '#28a745',
+  Danger: '#dc3545',
+  DarkGray:'#A9A9A9'
   };
 
   
