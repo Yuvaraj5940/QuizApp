@@ -33,10 +33,10 @@ import Python_medium from '../../components/quastions/Python_medim.json';
 import Python_hard from '../../components/quastions/Python_hard.json';
 import Git_easy from '../../components/quastions/Git_easy.json';
 import Git_medium from '../../components/quastions/Git_average.json';
-import Git_hard from '../../components/quastions/Git_hard.json';
 import React_native_easy from '../../components/quastions/React_Native_easy.json';
 import React_native_Average from '../../components/quastions/React_Native_medium.json';
 import React_native_hard from '../../components/quastions/React_native_hard.json';
+import Git_hard from '../../components/quastions/Git_hard.json';
 
 const HomeScreen = ({navigation}) => {
   const [refreshing, setRefreshing] = useState(false);
