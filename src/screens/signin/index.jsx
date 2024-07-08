@@ -40,7 +40,7 @@ import NetworkError from "../network";
 
 const SignIn = ({ navigation }) => {
   const [focused, setFocused] = useState("");
-  const [error, setError] = useState("Sign_In Error_Popup");
+  const [error, setError] = useState("Error in Sign in");
   const [remember, setRemember] = useState(false);
   const [signedin, setSignedin] = useState(false);
   const [localusername, setLocalUserName] = useState("");

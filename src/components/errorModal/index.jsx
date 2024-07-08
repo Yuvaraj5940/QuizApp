@@ -26,7 +26,7 @@ const ErrorModal = ({error, modalVisible, setModalVisible}) => {
             <Pressable
               style={styles.button}
               onPress={() => setModalVisible(!modalVisible)}>
-              <Text style={styles.textStyle}>Popup_Ok_Common</Text>
+              <Text style={styles.textStyle}>Ok</Text>
             </Pressable>
           </View>
         </View>
